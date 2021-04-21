@@ -10,8 +10,11 @@ namespace Tic_Tac_Toe
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public string winner;
+        private Form1 board;
+        public Form2(Form1 b)
         {
+            board = b;
             InitializeComponent();
         }
 
@@ -24,5 +27,15 @@ namespace Tic_Tac_Toe
         {
 
         }
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            board.clearBoard();
+            this.Close();
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
+        }
+        }
 }
